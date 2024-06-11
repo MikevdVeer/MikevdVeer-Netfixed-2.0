@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(36, 34, 34);
+    color: #fff;
+}
+
+:root {
+    --main-color: #ffc119;
+    --bg-color: #242222;
+    --nav-color: #1a1a1a;
+    --text-color: #fff;
+    --link-color: #ff8c00; /* or #ffa07a, or #66d9ef */
+    --close-button-color: #2f4f7f; /* dark blue */
+}
+
+.start a {
+    text-decoration: none;
+    color: #ffc119;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    font-size: large;
+    z-index: 9999;
+}
+
+header h3 {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: xx-large;
+    color: yellow;
+    padding: 15px;
+}
+  
+nav {
+    float: left;
+    margin: 25px;
+}
+  
+nav a,
+nav li {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.container {
+    border: 1px solid #fff;
+    height: 100%;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.release {
+    position: relative;
+    background-color: #ffc119;
+    padding: 10px;
+    color: black;
+}
+
+.release h3 {
+    display: inline-block;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.release h3:nth-child(2) {
+    color: black;
+}
+
+.release h3:nth-child(3) {
+    color: black;
+}
+
+.release h3:hover {
+    color: #fff;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.items img {
+    width: 300px;
+}
+
+footer {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding: 50px;
+}
+
+footer a {
+    font-size: 14px;
+}
+
+/* info-page */
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.discription {
+    width: 100%;
+}
+
+/* .discription h3, p {
+    position: relative;
+    left: 20px;
+} */
+
+.discription button {
+    font-size: 16px;
+    background-color: #ffc119;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button {
+    transition: transform 0.2s;
+}
+
+.discription button:hover {
+    transform: scale(1.09);
+}
+
+.content img {
+    position: relative;
+    max-width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
