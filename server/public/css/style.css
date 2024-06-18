@@ -20,9 +20,293 @@ body {
     color: #fff;
 }
 
-.video-container {
-    width: 95%;
+header {
+    position: relative;
+    top: 0;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    width: 100%;
+    max-height: 60px;
+    font-family: sans-serif;
+    font-size: large;
+    z-index: 9999;
+}
+
+header .links  {
+    display: flex;
+    align-items: center;
+}
+
+header .links h3 {
+    font-size: xx-large;
+    color: var(--main-color);
+    margin: 0;
+}
+
+header a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav, ul {
+    float: left;
+    margin: 0;
+}
+  
+nav a,
+nav li {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--text-color);
+    margin: 2px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Implement a better Hover  */
+.side-container {
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Overlay menu styles */
+.overlay-menu {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100px;
+    background-color: var(--bg-color);
+    transition: top 0.3s ease;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+  
+.overlay-menu.open {
+    top: 0;
+}
+  
+.overlay-menu ul {
+    /* position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+    list-style: none;
+    padding: 0;
+}
+  
+.overlay-menu ul li {
+    margin-bottom: 20px;
+}
+  
+.overlay-menu ul li a {
+    /* color: white; */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.side-container  img {
+    border-radius: 50%;
+    max-width: 60px;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer; 
+}
+
+.side-container > div {
+    display: flex;
+    align-self: center;
+    justify-self: space-between;
+    margin: 15px;
+}
+
+.side-container > i {
+    font-size: large;
+    font-weight: 600;
+}
+
+/* login form */
+
+section {
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    -webkit-animation: fadein 0.7s ease-in;
+    -moz-animation: fadein 0.7s ease-in;
+    animation: fadein 0.7s ease-in;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    cursor: default;
+}
+
+.overlay {
+    position: fixed;
+    max-height: 100%;
+    display: none;
+    width: 100%;
     margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.indicator {
+    margin-bottom: 50px;
+}
+
+.form-box {
+    position: relative;
+    width: 500px;
+    height: 550px;
+    background: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2e2b2b;
+    border: 3px solid var(--main-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dub, .sub {
+    margin-left: 4px;
+    text-align: center;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.close-btn > svg {
+    width: 24px; /* or any other size you prefer */
+    height: 24px; /* or any other size you prefer */
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.inputbox label {
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: var(--text-color);
+}
+
+#password {
+    color: black;
+}
+
+.login-configuration, .register-configuration {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: var(--text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    font-size: .9em;
+    color: var(--text-color);
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register h1 {
+    text-decoration: underline;
+}
+
+.register p a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.login-form h1, .register-form h1 {
+    text-decoration: none;
+    color: var(--close-button-color);
+}
+
+.login-form h1:hover, .register-form h1:hover {
+    text-decoration: underline;
+}
+
+.gg-menu {
+    display: none;
+}
+
+/* login animation */
+@keyframes fadein {
+    0%   { opacity: 0; }
+    50% {opacity: 0.5;}
+    100% { opacity: 1; }
+}   /* end header */
+
+.video-container {
     display: grid;
     grid-template-columns: 20% 1fr;
 }
@@ -39,7 +323,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -51,27 +334,15 @@ body {
     display: flex;
     text-align: center;
     align-items: center;
-}
-
-.episode-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.episode-range {
-    background-color: #2f2f2f;
-    padding: 5px;
-    text-align: center;
-}
-.episode-range > button{
-    width: 100%;
-    border: none;
-    background: none;
+    background-color: #363636;
     color: #fff;
+    max-width: 100%;
+    height: 30px;
+    transition: all 0.3s linear 0s;
 }
 
 .episode.active {
-    background: var(--main-color);
+    background: var(--link-color);
 }
 
 .episode button {
@@ -80,16 +351,6 @@ body {
     background: transparent;
     color: #fff;
     font-size: medium;
-    padding-right: 10px;
-}
-
-.episode {
-    padding-left: 12.5px;
-    background-color: #363636;
-    color: #fff;
-    max-width: 100%;
-    height: 30px;
-    transition: all 0.3s linear 0s;
 }
 
 .episode:hover {
